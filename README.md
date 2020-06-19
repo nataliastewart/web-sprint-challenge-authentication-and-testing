@@ -26,11 +26,21 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Differences between using _sessions_ or _JSON Web Tokens_ for authentication.
 
+Session cookies only work across a single domain, or on its subdomains. If they try to go to a third party, browsers tend to disable them. This is particularly an issue if you want your website to have a secure connection with an API that uses a different domain.
+
+With JSON web tokens, you can authenticate a user across multiple locations including multiple domains, mobile devices, and APIs to name a few. This is because they’re stored locally in the request header.
+
 2. What does `bcrypt` do to help us store passwords in a secure manner.
+
+`bcrypt` was designed for password hashing hence it is a slow algorithm. This is good for password hashing as it reduces the number of passwords by second an attacker could hash when crafting a dictionary attack.
 
 3. How are unit tests different from integration and end-to-end testing.
 
+E2E (end-to-end) testing is a type of functional test. Unlike a unit test, you're not breaking the application down into smaller parts in order to test it - you're testing the entire application
+
 4. How _Test Driven Development_ changes the way we write applications and tests.
+
+In the world of software development, test-driven development (commonly shortened to tdd) is an well-known and commonly-used development methodology by which (failing) tests are initially created, and only then is the actual software code created, which aims to pass the newly-generated tests.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
